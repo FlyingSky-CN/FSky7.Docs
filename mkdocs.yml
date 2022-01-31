@@ -1,0 +1,13 @@
+site_name: FlyingSky's Docs
+
+theme:
+  name: material
+  features:
+    - navigation.instantinstant
+    - navigation.tabs
+
+plugins:
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
