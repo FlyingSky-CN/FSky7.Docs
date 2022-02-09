@@ -29,12 +29,15 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  fonts: false
+  font: false
   icon: 
     repo: fontawesome/brands/github
   features:
     - navigation.instantinstant
     - navigation.tabs
+
+extra_css:
+  - stylesheets/font_roboto.css
 
 # Plugins Configuration
 plugins:
