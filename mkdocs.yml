@@ -1,13 +1,80 @@
 site_name: FlyingSky's Docs
+site_description: FlyingSky's Documentation Site
+site_author: FlyingSky
 
+# Repository
+repo_name: FlyingSky-CN/FSky7.Docs
+repo_url: https://github.com/FlyingSky-CN/FSky7.Docs
+edit_uri: https://github.com/FlyingSky-CN/FSky7.Docs
+
+# Copyright
+copyright: Copyright &copy; 2019-2022 <a href="https://fsky7.com">FlyingSky</a>
+
+# Theme Configuration
 theme:
   name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  fonts: false
+  icon: 
+    repo: fontawesome/brands/github
   features:
     - navigation.instantinstant
     - navigation.tabs
 
+# Plugins Configuration
 plugins:
+  - search:
+      lang: 
+        - en
+        - jp
   - minify:
       minify_html: true
       minify_js: true
       minify_css: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://fsky7.com/
+
+# Navigation
+nav:
+  - Welcome: index.md
+  - Typecho theme | MDr:
+    - 书写你的篇章: mdr/index.md
+    - 在开始之前: mdr/before-start.md
+    - 安装、更新及卸载: mdr/install.md
+    - 设置外观:
+      - 主题色设置: mdr/config/color.md
+      - CDN 设置: mdr/config/cdn.md
+    - 附加功能:
+      - 链接: mdr/function/links.md 
+      - 状态: mdr/function/status.md
+      - 短代码: mdr/function/code.md
+    - 技术信息:
+      - 框架和库: mdr/helper/frameworks.md
+    - 常见问题: mdr/faq.md
+    - 更新日志: mdr/changelog.md
+    - 隐私声明: mdr/privacy.md
+    - 帮助我们: mdr/help-us.md
